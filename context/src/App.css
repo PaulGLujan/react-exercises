@@ -1,0 +1,8 @@
+.counter-cont {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 500px;
+  align-items: center;
+  gap: 8px;
+}

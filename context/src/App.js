@@ -1,6 +1,10 @@
-import React, { createContext } from 'react';
+import React from 'react';
 import Header from './components/header';
 import ThemeProvider from './context/theme-context';
+import CounterProvider from './context/counter-context';
+import ClockBody from './components/ClockBody';
+import ClockButton from './components/ClockButton/ClockButton';
+import './App.css'
 
 export default class App extends React.Component {
 
@@ -14,6 +18,14 @@ export default class App extends React.Component {
         <ThemeProvider>
           <Header caption='Header with Context. Click to toggle.' />
         </ThemeProvider>
+
+        <h1>Functional Component Example</h1>
+        <CounterProvider>
+          <div className='counter-cont'>
+            <ClockBody />
+            <ClockButton />
+          </div>
+        </CounterProvider>
       </div>
     )
   }

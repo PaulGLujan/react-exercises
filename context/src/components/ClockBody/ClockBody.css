@@ -1,0 +1,9 @@
+.clock-body {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
