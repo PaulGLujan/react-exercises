@@ -6,7 +6,7 @@ function App() {
     <div className="columns-3">
       <div>
         <div>
-          <Button primary>
+          <Button primary className="mb-5">
             <GoBell />
             Click Me!
           </Button>
