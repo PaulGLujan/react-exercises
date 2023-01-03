@@ -1,91 +1,28 @@
-import Button from "./Button";
-import { GoBell, GoSmiley, GoListUnordered } from "react-icons/go";
+import Accordion from "./components/Accordion";
 
 function App() {
-  return (
-    <div className="columns-3">
-      <div>
-        <div>
-          <Button primary className="mb-5">
-            <GoBell />
-            Click Me!
-          </Button>
-        </div>
-        <div>
-          <Button secondary>
-            <GoSmiley />
-            Buy Now!
-          </Button>
-        </div>
-        <div>
-          <Button success>
-            <GoListUnordered />
-            See Deals!
-          </Button>
-        </div>
-        <div>
-          <Button warning>Hide Ads!</Button>
-        </div>
-        <div>
-          <Button danger>Something!</Button>
-        </div>
-      </div>
-      <div>
-        <div>
-          <Button primary rounded>
-            Click Me!
-          </Button>
-        </div>
-        <div>
-          <Button secondary rounded>
-            Buy Now!
-          </Button>
-        </div>
-        <div>
-          <Button success rounded>
-            See Deals!
-          </Button>
-        </div>
-        <div>
-          <Button warning rounded>
-            Hide Ads!
-          </Button>
-        </div>
-        <div>
-          <Button danger rounded>
-            Something!
-          </Button>
-        </div>
-      </div>
-      <div>
-        <div>
-          <Button primary outline>
-            Click Me!
-          </Button>
-        </div>
-        <div>
-          <Button secondary outline>
-            Buy Now!
-          </Button>
-        </div>
-        <div>
-          <Button success outline>
-            See Deals!
-          </Button>
-        </div>
-        <div>
-          <Button warning outline>
-            Hide Ads!
-          </Button>
-        </div>
-        <div>
-          <Button danger outline>
-            Something!
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
+  const items = [
+    {
+      id: "l2kj5",
+      label: "Can I use React on a project?",
+      content:
+        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
+    },
+    {
+      id: "lk2j35lkj",
+      label: "Can I use Javascript on a project?",
+      content:
+        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
+    },
+    {
+      id: "l1kj2i0g",
+      label: "Can I use CSS on a project?",
+      content:
+        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
+    },
+  ];
+
+  return <Accordion items={items} />;
 }
 
 export default App;
