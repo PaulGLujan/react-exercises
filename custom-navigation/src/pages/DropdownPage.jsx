@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Dropdown from "./components/Dropdown";
+import Dropdown from "../components/Dropdown";
 
 const options = [
   { label: "Red", value: "red" },

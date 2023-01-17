@@ -1,36 +1,28 @@
-import { useState } from "react";
-import Button from "./components/Button";
-import Modal from "./components/Modal";
+import Sidebar from "./components/Sidebar";
+import AccordionPage from "./pages/AccordionPage";
+import DropdownPage from "./pages/DropdownPage";
+import Route from "./components/Route";
+import ButtonPage from "./pages/ButtonPage";
+import ModalPage from "./pages/ModalPage";
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleClick = () => {
-    setShowModal(true);
-  };
-
-  const handleClose = () => {
-    setShowModal(false);
-  };
-
-  const actionBar = (
-    <div>
-      <Button primary onClick={handleClose}>
-        I accept
-      </Button>
-    </div>
-  );
-
-  const modal = (
-    <Modal onClose={handleClose} actionBar={actionBar}>
-      <p>Here is an important agreement for you to accept</p>
-    </Modal>
-  );
-
   return (
-    <div>
-      <Button onClick={handleClick}>Open Modal</Button>
-      {showModal && modal}
+    <div className="container mx-auto mt-4 grid grid-cols-6 gap-4">
+      <Sidebar />
+      <div className="col-span-5">
+        <Route path="/accordion">
+          <AccordionPage />
+        </Route>
+        <Route path="/">
+          <DropdownPage />
+        </Route>
+        <Route path="/buttons">
+          <ButtonPage />
+        </Route>
+        <Route path="/modal">
+          <ModalPage />
+        </Route>
+      </div>
     </div>
   );
 }
